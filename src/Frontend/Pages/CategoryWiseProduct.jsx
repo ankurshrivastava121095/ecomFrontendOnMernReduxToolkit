@@ -54,6 +54,7 @@ const CategoryWiseProduct = () => {
                                     imageUrl={val?.productImage?.url} 
                                     productName={val?.productName} 
                                     productID={val?._id} 
+                                    productPrice={val?.productPrice} 
                                 />
                             </React.Fragment>
                             : ''

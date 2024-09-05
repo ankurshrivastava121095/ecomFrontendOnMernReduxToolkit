@@ -19,6 +19,7 @@ import OrderList from "./Admin/Pages/Order/List";
 import MyWishlist from "./Frontend/Pages/MyWishlist";
 import Categories from "./Frontend/Pages/Categories";
 import CategoryWiseProduct from "./Frontend/Pages/CategoryWiseProduct";
+import RelatedProducts from "./Frontend/Pages/RelatedProducts";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navbar />}>
           <Route path="/" element={<Home />} />
+          <Route path="/relatedProducts" element={<RelatedProducts />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/categoryProducts/:id" element={<CategoryWiseProduct />} />
           <Route path="/productDetail/:id" element={<ProductDetail pageName='Product' />} />

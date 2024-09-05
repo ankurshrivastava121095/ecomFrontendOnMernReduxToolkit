@@ -212,12 +212,12 @@ const ProductDetail = ({ pageName }) => {
                         <div className='fs-1 mb-3'>{productName ? productName : <Spinner />}</div>
                         <div className='fs-4 mb-3'>{productPrice ? productPrice : <Spinner />}/-</div>
                         <div className='mb-5'>
-                            <button type='button' className='btn btn-warning' onClick={decrement}><i className="fa-solid fa-minus"></i></button>
+                            <button type='button' className='btn btn-primary' onClick={decrement}><i className="fa-solid fa-minus"></i></button>
                             <input type="text" className='cart-input' value={productQuantity} readOnly />
-                            <button type='button' className='btn btn-warning' onClick={increment}><i className="fa-solid fa-plus"></i></button>
+                            <button type='button' className='btn btn-primary' onClick={increment}><i className="fa-solid fa-plus"></i></button>
                         </div>
                         <div className='mb-3'>
-                            <button type='submit' className='btn btn-warning btn-lg w-100'><i className="fa-solid fa-cart-shopping"></i> Buy now</button>
+                            <button type='submit' className='btn btn-primary btn-lg w-100'><i className="fa-solid fa-cart-shopping"></i> Buy now</button>
                         </div>
                         <div className='mb-3'>
                             <button type='button' className='btn btn-orange btn-lg w-100' onClick={handleAddToCart}><i className="fa-solid fa-cart-plus"></i> Add to cart</button>

@@ -84,9 +84,9 @@ const Cart = ({ pageName }) => {
                                                             <td>
                                                                 <center>
                                                                     <div>
-                                                                        <button type='button' className='btn btn-warning' onClick={()=>decrement(val?.productId)}><i className="fa-solid fa-minus"></i></button>
+                                                                        <button type='button' className='btn btn-primary' onClick={()=>decrement(val?.productId)}><i className="fa-solid fa-minus"></i></button>
                                                                         <input type="text" className='cart-input' value={val?.quantity} readOnly />
-                                                                        <button type='button' className='btn btn-warning' onClick={()=>increment(val?.productId)}><i className="fa-solid fa-plus"></i></button>
+                                                                        <button type='button' className='btn btn-primary' onClick={()=>increment(val?.productId)}><i className="fa-solid fa-plus"></i></button>
                                                                     </div>
                                                                 </center>
                                                             </td>
@@ -125,7 +125,7 @@ const Cart = ({ pageName }) => {
                                     <div className='fw-bold fs-5'>{grandTotal}/-</div>
                                 </div>
                                 <div className='py-2'>
-                                    <button type='button' className='btn btn-lg btn-warning w-100' onClick={proceedToCheckout}>Proceed to checkout</button>
+                                    <button type='button' className='btn btn-lg btn-primary w-100' onClick={proceedToCheckout}>Proceed to checkout</button>
                                 </div>
                             </div>
                         }

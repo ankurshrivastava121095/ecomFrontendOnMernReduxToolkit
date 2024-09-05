@@ -81,7 +81,7 @@ const MyWishlist = () => {
                                             <img src={val?.productDetail?.productImage} className='w-100' alt="" />
                                         </div>
                                         <div className='text-center fs-4 mt-3'>{val?.productDetail?.productName}</div>
-                                        <Link to={`/productDetail/${val?.productId}`} className='btn btn-warning w-100 mt-3'>Buy Now</Link>
+                                        <Link to={`/productDetail/${val?.productId}`} className='btn btn-primary w-100 mt-3'>Buy Now ₹{val?.productDetail?.productPrice}</Link>
                                         <div role='button' className='btn btn-orange w-100 mt-3' onClick={() => handleRemoveFromWishlist(val?.productId)}>Remove</div>
                                     </div>
                                 </div>

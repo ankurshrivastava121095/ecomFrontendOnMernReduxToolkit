@@ -13,9 +13,15 @@ const Navbar = () => {
     const dispatch = useDispatch()
 
     const [user, setUser] = useState()
+    const [searchedProduct, setSearchedProduct] = useState('')
     const [isUserLoggedIn, setIsUserLoggedIn] = useState(false)
 
     const cartItems = useSelector(selectCartItems);
+
+    const handleProductSearch = (e) => {
+        e.preventDefault()
+        navigate(`/relatedProducts?keyword=${searchedProduct}`)
+    }
 
     const handleLogout = () => {
         localStorage.removeItem('userData')
@@ -40,13 +46,14 @@ const Navbar = () => {
             {/* topbar starts */}
             <div className='d-flex flex-wrap align-items-center justify-content-between bg-warning gap-4 p-3'>
                 <div className='fs-1'><i className="fa-solid fa-cart-shopping"></i></div>
+                <div className='fs-1 fw-bold fst-italic' style={{ color: '#14376d' }}>QuickBuY</div>
                 <div className='d-flex flex-wrap gap-4'>
                     <div>
-                        <div className='fs-3'>24x7</div>
+                        <div className='fs-5'>24x7</div>
                         <div><small>Customer Service</small></div>
                     </div>
                     <div>
-                        <div className='fs-3'>Free Delivery</div>
+                        <div className='fs-5'>Free Delivery</div>
                         <div><small>Enjoy Delivery Free Products</small></div>
                     </div>
                 </div>
@@ -56,19 +63,21 @@ const Navbar = () => {
             {/* navbar starts */}
             <nav className="navbar navbar-expand-lg bg-nav">
                 <div className="container-fluid">
-                    <Link className="navbar-brand text-white" to="/">QuickBuy</Link>
+                    <Link className="navbar-brand text-white" to="/">QuickBuY</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <i className="fa-solid fa-bars-staggered text-white"></i>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav nav-search-bar">
-                            <form className="d-flex" role="search">
+                            <form onSubmit={handleProductSearch} className="d-flex align-items-center gap-0" role="search">
                                 <input
-                                    className="form-control form-control-sm me-2 min-width-295px"
+                                    className="form-control form-control-sm rounded-0 min-width-295px"
                                     type="search"
                                     placeholder="Search"
                                     aria-label="Search"
+                                    onChange={e => setSearchedProduct(e.target.value)}
                                 />
+                                <button type='submit' className='btn btn-sm btn-primary rounded-0'><i className="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </ul>
                         <ul className="navbar-nav ms-auto fs-5">
@@ -122,7 +131,7 @@ const Navbar = () => {
             {/* footer starts */}
             <div className="w-100 bg-warning mt-5 p-3">
                 <center>
-                    <div>Copyright &copy; Oriol Infotech Pvt. Ltd.</div>
+                    <div>Copyright &copy; Sample Ecommerce WebApp by Ankur Shrivastava.</div>
                 </center>
             </div>
             {/* footer ends */}

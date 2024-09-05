@@ -110,7 +110,7 @@ const CategoryList = () => {
                     <div className="col-md-12">
                         <div className='d-flex flex-wrap align-items-center justify-content-between mb-4'>
                             <div className='fs-3 fw-bold'>Category List</div>
-                            <button type='button' className='btn btn-warning' onClick={()=>handleFormModal('Add')}>Add New</button>
+                            <button type='button' className='btn btn-primary' onClick={()=>handleFormModal('Add')}>Add New</button>
                         </div>
                         <div className='table-responsive'>
                             {
@@ -136,8 +136,8 @@ const CategoryList = () => {
                                                     </td>
                                                     <td>{val?.categoryName}</td>
                                                     <td className='d-flex gap-2 flex-wrap'>
-                                                        <button type='button' className='btn btn-warning' onClick={()=>handleFormModal('Edit',val?._id)}>Edit</button>
-                                                        <button type='button' className='btn btn-warning' onClick={()=>handleDelete(val?._id)}>Delete</button>
+                                                        <button type='button' className='btn btn-primary' onClick={()=>handleFormModal('Edit',val?._id)}>Edit</button>
+                                                        <button type='button' className='btn btn-primary' onClick={()=>handleDelete(val?._id)}>Delete</button>
                                                     </td>
                                                 </tr>
                                             ))
